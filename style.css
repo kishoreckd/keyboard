@@ -1,0 +1,114 @@
+.main {
+    /* text-align: center; */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 80%);
+    transition: all 0.3s linear;
+    padding: 32px;
+    width: 45%;
+    margin-left: 280px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+
+}
+button{
+    /* background: #fff; */
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+    box-shadow:0 2px 1px rgb(0 0 0 / 51%);
+    border-radius: 8px;
+    border: none;
+}
+button:active{
+    background-color: #857f7f;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+}
+textarea{
+    margin-left: 282px;
+    width: 658px;
+}
+.btn.active {
+    background-color: #312d2d;
+    color: #fff;
+}
+
+.btn.remove {
+    animation: keys_animation 0.5s forwards ;
+}
+
+@keyframes keys_animation {
+    0% {
+        background-color: #165ddf;
+        color: #fff;
+    }
+    100% {
+        background-color: #fff;
+        color: #08bd71;
+    }
+}
+/* button:focus{
+    background: #aca9a9;
+} */
+
+button.backspace{
+    width: 96px
+}
+
+button#tab{
+    width: 70px;
+}
+button#caps{
+    width: 55px;
+    /* color: black; */
+}
+button#enter{
+    width: 62px;
+}
+button#shift{
+    width: 59px;
+}
+button#com {
+    height: 35px;
+    width: 80px;
+}
+button#space {
+    height: 35px;
+    width: 441px;
+}
+
+/* .caps{
+    background-color: red;
+    color: red;
+} */
+.red{
+color: red;
+}
+button#\@ {
+    width: 53px;
+    height: 35px;
+}
+.two button{
+    width: 32px;
+}
+.three button{
+    margin: 3px;
+    width: 32px;
+}
+.four button{
+    width: 36px;
+    margin:3px ;
+}
+
+
+
+p{
+    position: relative;
+}

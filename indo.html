@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <textarea id="txtArea" onkeypress="onTestChange();"></textarea>
+    
+    <script>
+    function onTestChange() {
+        var key = window.event.keyCode;
+    
+        // If the user has pressed enter
+        if (key === 13) {
+            document.getElementById("txtArea").value = document.getElementById("txtArea").value + "\n*";
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    </script>
+    
+    </body>
+    
+</html>
+
+if (e.target.innerText === "caps") {
+    buttons[i].classList.toggle("caps")
+    for(let k=0;k<buttons.length;k++){
+        if(buttons[k].classList.contains("caps")){
+           if(buttons[k].innerText !== "backspace" && buttons[k].innerText !== "tab" && buttons[k].innerText !== "caps".toUpperCase() &&
+            buttons[k].innerText !== "enter" && buttons[k].innerText !== "shift" && buttons[k].innerText !== ".com"
+            && buttons[k].innerText !== "space" && buttons[k].innerText !== "@") {
+                buttons[k].innerText= buttons[k].innerText.toUpperCase()
+            }
+
+        
+            else{
+
+                if(buttons[k].innerText !== "backspace" && buttons[k].innerText !== "tab" && buttons[k].innerText !== "caps".toUpperCase() &&
+                buttons[k].innerText !== "enter" && buttons[k].innerText !== "shift" && buttons[k].innerText !== ".com"
+                && buttons[k].innerText !== "space" && buttons[k].innerText !== "@") {
+                    buttons[k].innerText.toLowerCase()
+                }
+
+            }
+        }
+    }
+}
