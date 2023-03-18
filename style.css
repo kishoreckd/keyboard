@@ -15,6 +15,27 @@
 
 
 }
+.container{
+    display: flex;
+}
+
+.main1 {
+    /* text-align: center; */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 80%);
+    transition: all 0.3s linear;
+    padding: 32px;
+    width: 45%;
+    margin-left: 280px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+
+
+}
 button{
     /* background: #fff; */
     height: 30px;
@@ -58,6 +79,9 @@ textarea{
 button.backspace{
     width: 96px
 }
+button#del {
+    width: 50px;
+}
 
 button#tab{
     width: 70px;
@@ -78,7 +102,7 @@ button#com {
 }
 button#space {
     height: 35px;
-    width: 441px;
+    width: 381px;
 }
 
 .ones{

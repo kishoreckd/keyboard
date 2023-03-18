@@ -11,9 +11,9 @@ const tops = document.querySelectorAll("#top")
 const shift = document.querySelectorAll("#shift")
 
 // adding new array while shift is clicked
-let array = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"]
+let array = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+","{","}","|",":",'"',"<",">","?"]
 
-let array1 = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="]
+let array1 = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=","[","]",'/',";","'",",",".","/"]
 
 
 // looping the buttons
@@ -25,7 +25,7 @@ for (let i = 0; i < buttons.length; i++) {
         if (e.target.id === "caps") {
             capslock()
         }
-        else if (e.target.innerText !== "backspace" && e.target.innerText !== "tab" && e.target.innerText !== "caps" &&
+        else if (e.target.innerText !== "backspace" && e.target.innerText !== "delete" && e.target.innerText !== "tab" && e.target.innerText !== "caps" &&
             e.target.innerText !== "enter" && e.target.innerText !== "shift" && e.target.innerText !== ".com"
             && e.target.innerText !== "space" && e.target.innerText !== "@") {
             let values = e.target.innerText;
@@ -36,9 +36,10 @@ for (let i = 0; i < buttons.length; i++) {
         }
 
         else if (e.target.innerText == "shift") {
-
-
             shiftbutton()
+        }
+        else if (e.target.innerText == "delete") {
+            text.value = " ";
         }
 
 
@@ -69,17 +70,21 @@ for (let i = 0; i < buttons.length; i++) {
 
 // it will affect when the key is pressed
 window.addEventListener('keyup', function (e) {
-    if (e.key.toLowerCase() != "capslock" && e.key.toLowerCase() != "backspace" && e.key.toLowerCase() != "tab" && e.key.toLowerCase() != "enter"
+    if (e.key.toLowerCase() != "delete" && e.key.toLowerCase() != "wakeup" &&e.key.toLowerCase() != "capslock" && e.key.toLowerCase() != "backspace" && e.key.toLowerCase() != "tab" && e.key.toLowerCase() != "enter"
         && e.key.toLowerCase() != "shift" && e.key.toLowerCase() != "space" && e.key.toLowerCase() != ".com" && e.key.toLowerCase() != "alt" && e.key.toLowerCase() != "control") {
         text.value += e.key
     }
 
-    if (e.key.toLowerCase() == "capslock") {
+   else if (e.key.toLowerCase() == "capslock") {
         capslock()
+    }
+   else if (e.key.toLowerCase() == "delete") {
+    text.value = " ";
+        
     }
 
 
-    if (e.key == "") {
+  else  if (e.key == "") {
         text.value += " ";
     }
     else if (e.key.toLowerCase() == "shift") {
@@ -87,17 +92,15 @@ window.addEventListener('keyup', function (e) {
 
     }
 
-
-
-
-
-
     else if (e.key.toLowerCase() == "backspace") {
         text.value = text.value.slice(0, text.value.length - 1);
     }
 
     else if (e.key.toLowerCase() === "tab") {
-        text.value += "    ";
+        text.value += "   ";
+    }
+    else if (e.key.toLowerCase() === "control") {
+        text.value += "@";
     }
     else if (e.key.toLowerCase() === "alt") {
         text.value += ".com";
@@ -114,35 +117,18 @@ window.addEventListener('keyup', function (e) {
 
 
         if (e.key.toLowerCase() == btn[i].innerText.toLowerCase()) {
-            btn[i].classList.remove('active')
-            btn[i].classList.add('remove')
-        }
-
-
-
-        // setTimeout(() => {
-        //     btn[i].classList.remove('remove')
-        // }, 200)
-    }
-})
-
-window.addEventListener('keyup', function (e) {
-    for (let i = 0; i < btn.length; i++) {
-
-        if (e.key == btn[i].innerText) {
             // btn[i].classList.remove('active')
             btn[i].classList.add('remove')
-
-            // alert("ol")
         }
-
-
-
         setTimeout(() => {
             btn[i].classList.remove('remove')
         }, 200)
+
+
+      
     }
 })
+
 
 
 
@@ -151,7 +137,7 @@ function capslock() {
     for (let k = 0; k < buttons.length; k++) {
         if (caps.classList.contains("red")) {
             if (buttons[k].innerText != "caps".toUpperCase && buttons[k].innerText != "backspace" && buttons[k].innerText != "tab" && buttons[k].innerText != "enter"
-                && buttons[k].innerText != "shift" && buttons[k].innerText != "space" && buttons[k].innerText != ".com") {
+                && buttons[k].innerText != "shift" && buttons[k].innerText != "delete" && buttons[k].innerText != "space" && buttons[k].innerText != ".com") {
                 buttons[k].innerText = buttons[k].innerText.toUpperCase()
             }
         } else {
@@ -190,3 +176,15 @@ function shiftbutton() {
 
     }
 }
+
+
+
+function disable()
+{
+ document.onkeydown = function (e) 
+ {
+  return false;
+ }
+}
+
+
