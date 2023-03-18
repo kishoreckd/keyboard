@@ -49,10 +49,7 @@ textarea{
         background-color: #165ddf;
         color: #fff;
     }
-    100% {
-        background-color: #fff;
-        color: #08bd71;
-    }
+
 }
 /* button:focus{
     background: #aca9a9;
@@ -66,11 +63,11 @@ button#tab{
     width: 70px;
 }
 button#caps{
-    width: 55px;
+    width: 82px;
     /* color: black; */
 }
 button#enter{
-    width: 62px;
+    width: 40px;
 }
 button#shift{
     width: 59px;
@@ -82,6 +79,10 @@ button#com {
 button#space {
     height: 35px;
     width: 441px;
+}
+
+.ones{
+    color:black;
 }
 
 /* .caps{
