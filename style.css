@@ -1,3 +1,8 @@
+
+
+body {
+    background-color: #cbe0f1;
+}
 .main {
     /* text-align: center; */
     background: #fff;
@@ -6,7 +11,7 @@
     transition: all 0.3s linear;
     padding: 32px;
     width: 45%;
-    margin-left: 280px;
+    margin-left: 180px;
     margin-top: 40px;
     display: flex;
     justify-content: center;
@@ -15,25 +20,26 @@
 
 
 }
-.container{
-    display: flex;
-}
+
 
 .main1 {
-    /* text-align: center; */
+    position: fixed;
+    left: 912px;
+    bottom: 189px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 80%);
     transition: all 0.3s linear;
-    padding: 32px;
-    width: 45%;
-    margin-left: 280px;
-    margin-top: 40px;
+    padding: 28px;
+    width: 27%;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+  
     flex-wrap: wrap;
-
+}
+li{
+    list-style:circle;
+    font-size: 19px;
 
 }
 button{
@@ -53,8 +59,9 @@ button:hover{
     cursor: pointer;
 }
 textarea{
-    margin-left: 282px;
-    width: 658px;
+    margin-left: 180px;
+    width: 49%;
+    font-size: 19px;
 }
 .btn.active {
     background-color: #312d2d;
@@ -72,9 +79,7 @@ textarea{
     }
 
 }
-/* button:focus{
-    background: #aca9a9;
-} */
+
 
 button.backspace{
     width: 96px
@@ -88,7 +93,6 @@ button#tab{
 }
 button#caps{
     width: 82px;
-    /* color: black; */
 }
 button#enter{
     width: 40px;
@@ -109,10 +113,7 @@ button#space {
     color:black;
 }
 
-/* .caps{
-    background-color: red;
-    color: red;
-} */
+
 .red{
 color: red;
 }
@@ -132,8 +133,3 @@ button#\@ {
     margin:3px ;
 }
 
-
-
-p{
-    position: relative;
-}

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keyboard</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Keyboard</title>
 
-<body>
-    <div class="container">
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </head>
+
+    <body>
+
         <div class="container1">
             <div class="input">
-                <textarea name="" value="disable" onclick="disable()" id="textarea" cols="30" rows="10"></textarea>
+                <textarea name="" value="disable" onclick="disable()"
+                    id="textarea" cols="30" rows="10"></textarea>
             </div>
             <div class="main">
                 <div class="one">
@@ -62,7 +65,7 @@
                     <button class="btn">l</button>
                     <button id="top" class="btn">;</button>
                     <button id="top" class="btn">'</button>
-                    <button  class="btn" id="enter">enter</button>
+                    <button class="btn" id="enter">enter</button>
                 </div>
                 <div class="four">
                     <button class="btn l" id="shift">shift</button>
@@ -78,22 +81,38 @@
                     <button id="top" class="btn">/</button>
                     <button class="btn r" id="shift">shift</button>
                 </div>
-    
-    
+
+
                 <div class="five">
                     <button class="btn" id="com">.com</button>
                     <button class="btn" id="@">@</button>
                     <button class="btn" id="space">space</button>
-    
+
                     <button class="btn" id="del">delete</button>
                 </div>
-    
-               
             </div>
         </div>
+    <div class="main1">
+        <h2>KeyBoard Instruction</h2>
+        <ul>
+            <li>
+                If you click ctrl button it inserts  "@".
+            </li>
+            <li>
+                If you click alt button it inserts ".com".
+            </li>
+            <li>
+                If you click delete button it deletes the entrie Document.
+            </li>
+            <li>
+                If you click it tends to the next line of the Document.
+            </li>
+        </ul>
     </div>
-    
-    <script src="./index.js"></script>
-</body>
+       
+
+
+        <script src="./index.js"></script>
+    </body>
 
 </html>
