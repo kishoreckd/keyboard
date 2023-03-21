@@ -13,12 +13,30 @@ body {
     width: 45%;
     margin-left: 180px;
     margin-top: 40px;
-    display: flex;
+    display: block;
     justify-content: center;
     /* align-items: center; */
     flex-wrap: wrap;
 
 
+}
+.mains{
+        /* text-align: center; */
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgb(0 0 0 / 80%);
+        transition: all 0.3s linear;
+        padding: 32px;
+        width: 45%;
+        margin-left: 180px;
+        margin-top: 40px;
+        display: none;
+        justify-content: center;
+        /* align-items: center; */
+        flex-wrap: wrap;
+    
+    
+    
 }
 
 
@@ -82,7 +100,7 @@ textarea{
 
 
 button.backspace{
-    width: 96px
+    width: 75px
 }
 button#del {
     width: 50px;
@@ -91,25 +109,52 @@ button#del {
 button#tab{
     width: 70px;
 }
+button#Tab{
+    width: 80px;
+}
+button#v {
+    width: 47px;
+}
 button#caps{
     width: 82px;
 }
 button#enter{
     width: 40px;
 }
+button#Enterr{
+    width: 57px;
+}
+button#change{
+    width: 61px;
+}
+button#tami{
+    width: 65px;
+}
+button#spacee{
+    width: 75%
+}
+button{
+width: 32px;
+}
 button#shift{
-    width: 59px;
+    width: 67px;
+}
+button#deletee{
+    width: 67px;
 }
 button#com {
     height: 35px;
-    width: 80px;
+    width: 47px;
 }
 button#space {
     height: 35px;
-    width: 381px;
+    width: 298px;
 }
 
 .ones{
+    color:black;
+}
+.changes{
     color:black;
 }
 
@@ -128,8 +173,13 @@ button#\@ {
     margin: 3px;
     width: 32px;
 }
+.fours button{
+    width: 33px;
+    margin:3px ;
+}
+
 .four button{
-    width: 36px;
+    width:35px;
     margin:3px ;
 }
 

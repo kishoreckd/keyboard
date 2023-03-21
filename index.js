@@ -10,6 +10,12 @@ const tops = document.querySelectorAll("#top")
 
 const shift = document.querySelectorAll("#shift")
 
+const main =document.querySelector(".main")
+const main1 =document.querySelector(".mains")
+
+const changes =document.querySelector("#change")
+
+
 // adding new array while shift is clicked
 let array = ["~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+","{","}","|",":",'"',"<",">","?"]
 
@@ -18,16 +24,31 @@ let array1 = ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "=","[
 
 // looping the buttons
 
+let checkonline = window.navigator.onLine ? "online":"offline";
+if (checkonline =="online") {
+    
 // it will affect when the button is clicked
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", (e) => {
+        if (e.target.innerText === "change") {
+            changes.classList.toggle("changes")
+            if (changes.classList.contains("changes")) {
+                main.style.display="none"
+                main1.style.display="flex"
+            }
+            else{
+                main.style.display="flex"
+                main1.style.display="none"
+            }
+          
+        }
 
         if (e.target.id === "caps") {
             capslock()
         }
         else if (e.target.innerText !== "backspace" && e.target.innerText !== "delete" && e.target.innerText !== "tab" && e.target.innerText !== "caps" &&
-            e.target.innerText !== "enter" && e.target.innerText !== "shift" && e.target.innerText !== ".com"
-            && e.target.innerText !== "space" && e.target.innerText !== "@") {
+            e.target.innerText !== "enter" && e.target.innerText !== "shift"&&e.target.innerText !== "E-mic" &&e.target.innerText !== "Tam-mic" && e.target.innerText !== ".com"
+            && e.target.innerText !== "space" && e.target.innerText !== "@"  && e.target.innerText !== "change") {
             let values = e.target.innerText;
             text.value += values;
 
@@ -38,6 +59,14 @@ for (let i = 0; i < buttons.length; i++) {
         else if (e.target.innerText == "shift") {
             shiftbutton()
         }
+        else if (e.target.innerText == "E-mic") {
+            engvoice()
+        }
+        else if (e.target.innerText == "Tam-mic") {
+            tamvoice()
+        }
+    
+    
         else if (e.target.innerText == "delete") {
             text.value = " ";
         }
@@ -78,6 +107,7 @@ window.addEventListener('keyup', function (e) {
    else if (e.key.toLowerCase() == "capslock") {
         capslock()
     }
+   
    else if (e.key.toLowerCase() == "delete") {
     text.value = " ";
         
@@ -125,8 +155,12 @@ window.addEventListener('keyup', function (e) {
         }, 200)
 
 
+       
+
+
       
     }
+   
 })
 
 
@@ -177,6 +211,8 @@ function shiftbutton() {
     }
 }
 
+}
+
 
 
 function disable()
@@ -188,3 +224,88 @@ function disable()
 }
 
 
+function engvoice() {
+    let speech = "kishore";
+    window.SpeechRecognition = window.SpeechRecognition
+                    || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+   // console.log(recognition);
+    recognition.interimResults = true;
+    recognition.lang = "en-US";
+
+
+    recognition.addEventListener('result', (e) => {
+        const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('')
+
+        // console.log(transcript)
+        text.value += transcript
+    });
+
+    if (speech == "kishore") {
+        recognition.start();
+        recognition.addEventListener('end', recognition.start);
+    }
+
+}
+
+
+
+function engvoice() {
+    let speech = "kishore";
+    window.SpeechRecognition = window.SpeechRecognition
+                    || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+   // console.log(recognition);
+    recognition.interimResults = true;
+    recognition.lang = "en-US";
+
+
+    recognition.addEventListener('result', (e) => {
+        const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('')
+
+        // console.log(transcript)
+        text.value += transcript
+    });
+
+    if (speech == "kishore") {
+        recognition.start();
+        recognition.addEventListener('end', recognition.start);
+    }
+
+}
+
+function tamvoice() {
+    let speech = "kishore";
+    window.SpeechRecognition = window.SpeechRecognition
+                    || window.webkitSpeechRecognition;
+
+    const recognition = new SpeechRecognition();
+   // console.log(recognition);
+    recognition.interimResults = true;
+    recognition.lang = "ta-IN";
+
+
+    recognition.addEventListener('result', (e) => {
+        const transcript = Array.from(e.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('')
+
+        // console.log(transcript)
+        text.value += transcript
+    });
+
+    if (speech == "kishore") {
+        recognition.start();
+        recognition.addEventListener('end', recognition.start);
+    }
+
+}
